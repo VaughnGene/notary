@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
-html {
-    height: 100%;
-}
+/* html {
+    height: 100%; I guess is dont need this anymore?
+} */
 body {
-    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    /* height: 100%; (This goes with the HTML thing above, i guess i also dont need this? */ 
     background-image: linear-gradient(120deg, rgb(114,47,55) 0%, rgb(29, 49, 73) 70%);
     margin: 0;
     background-repeat: no-repeat;
 }
 
 .responsive {
-    width: 75%;
+    width: 50%;
     height: auto;
 }
 
@@ -20,4 +20,10 @@ img {
 }
 .displayBox {
     width: 100%;
+}
+.scroll-box {
+    overflow-y: auto;
+    height: 500px;
+    float: left;
+    padding: 1rem;
 }
