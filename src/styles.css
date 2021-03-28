@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 html {
     height: 100%;
 }
 body {
-    /* why is this reseting at the bottom? */
     height: 100%;
     background-image: linear-gradient(120deg, rgb(114,47,55) 0%, rgb(29, 49, 73) 70%);
     margin: 0;
@@ -12,4 +13,11 @@ body {
 .responsive {
     width: 75%;
     height: auto;
+}
+
+img {
+    padding: 15px;
+}
+.displayBox {
+    width: 100%;
 }
