@@ -1,16 +1,16 @@
 //Load book from disk
-function loadBook(filename, displayName) {
+function loadBook(filename,displayName) {
     let currentBook = "";
     let url = "books/" + filename;
 
     //reset the UI
-    document.getElementById('fileName').innerHTML = displayName;
+    document.getElementById("fileName").innerHTML = displayName;
     document.getElementById('searchstat').innerHTML = "";
     document.getElementById('keyword').value = "";
 
     //create a server request
     var xhr = XMLHttpRequest();
-    xhr.open("GET", url, true);
+    xhr.open("GET", url, true );
     xhr.send();
 
     xhr.onreadystatechange = function () {
