@@ -9,7 +9,7 @@ function loadBook(filename, displayName) {
     document.getElementById('keyword').value = "";
 
     //create a server request
-    var xhr = XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true );
     xhr.send();
 
