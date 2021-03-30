@@ -10,7 +10,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <!-- Search String JS File-->
+    <script src="src/searchstring.js"></script>
     <!-- My CSS File-->
     <link rel='My Stylesheet' href="src/styles.css">
 </head>
@@ -54,42 +55,63 @@
                 </div>
                 <!-- Select a Book Widget-->
                 <div class="card my-4">
-                    <div class="card-header">
-
-                    </div>
-                    <div class="card-body">
-
-                    </div>
-                    <div class="card-footer"></div>
+                    <h5 class="card-header">Select Book<h5>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul class="list-unstyled mb-0">
+                                            <li><a href="#"
+                                                    onclick="loadBook('AliceInWonderland.txt','Alice In Wonderland')">Alice
+                                                    in Wonderland</a></li>
+                                            <li><a href="#" onclick="loadBook('LOTR.txt','Lord of the Rings')">Lord of
+                                                    the Rings</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"></div>
                 </div>
-                <!-- From here down, idk yet-->
+                <!-- Most used words-->
                 <div class="card my-4">
-                    <div class="card-header">
-
-                    </div>
+                    <h5 class="card-header">Most Used Words</h5>
                     <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-unstyled mb-0" id="mostUsed">
 
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-footer"></div>
                 </div>
                 <div class="card my-4">
-                    <div class="card-header">
-
-                    </div>
+                    <h5 class="card-header">Least Used Words</h5>
                     <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-unstyled mb-0" id="mostUsed">
 
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-footer"></div>
                 </div>
                 <div class="card my-4">
-                    <div class="card-header">
-
-                    </div>
+                    <h5 class="card-header">Document Stats</h5>
                     <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-unstyled mb-0" id="mostUsed">
 
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-footer"></div>
                 </div>
+
             </div>
         </div>
 
@@ -104,6 +126,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+        <!-- <script src="src/index.js"></script> -->
 </body>
 
 </html>
