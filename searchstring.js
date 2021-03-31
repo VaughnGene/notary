@@ -18,7 +18,7 @@ function loadBook(filename, displayName) {
             currentBook = xhr.responseText;
 
             //remove line breaks and stuff
-            currentBook = currentBook.replace(/(?:\r\n|\r\|n)/g, '<br');
+            currentBook = currentBook.replace(/(?:\r\n|\r|\n)/g, '<br>');
 
             document.getElementById('fileContent').innerHTML = currentBook;
 
