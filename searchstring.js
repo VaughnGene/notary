@@ -27,3 +27,34 @@ function loadBook(filename, displayName) {
         }
     };
 }
+
+function getDocStats(fileContent) {
+    var docLength = document.getElementById("docLength");
+    var wordCount = document.getElementById("wordCount");
+    var charCount = document.getElementById('charCount');
+
+    let text = fileContent.toLowerCase();
+    let wordArray = text.match(/\b\S+\b/g); //returns an array of words if there is a space on both sides.
+    let wordDictionary = {};
+
+    //Count every word in the word array
+    for (let word in wordArray) {
+        let wordValue = wordArray[word];
+        if (wordDictionary[wordValue] > 0) {
+            wordDictionary[wordValue] += 1;
+        }
+        else {
+            wordDictionary[wordValue] = 1; // this part is mainly for the first time it find the word.
+        }
+    }
+}
+
+//function that sorts the most and least used words
+
+function sortProperties(obj) {
+    //first convert the object to an array
+    let rtnArray = Object.defineProperties(obj);
+
+    //sort the array
+    
+}
