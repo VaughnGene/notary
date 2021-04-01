@@ -45,14 +45,12 @@ function getDocStats(fileContent) {
 
     //filter out the stop words
 
-
-
-
+    uncommonWords = filterStopWords(wordArray);
 
 
     //Count every word in the word array
-    for (let word in wordArray) {
-        let wordValue = wordArray[word];
+    for (let word in uncommonWords) {
+        let wordValue = uncommonWords[word];
         if (wordDictionary[wordValue] > 0) {
             wordDictionary[wordValue] += 1;
         } else {
@@ -72,6 +70,8 @@ function getDocStats(fileContent) {
     ULTemplate(top5Words, document.getElementById('mostUsed'));
     ULTemplate(least5Words, document.getElementById('leastUsed'));
 
+    // docLength.innerText = "Document Length: " + text.length;
+    // wordCount.innerText = "Word Count: " + wordArray.length;
 }
 
 
@@ -84,7 +84,7 @@ function ULTemplate(items, element) {
     let resultsHTML = "";
 
     for (i = 0; i < items.length - 1; i++) {
-        resultsHTML += templateHTML.replace("{{val}}", items[i][0] + ":" + items[i][1] + 'time(s)');
+        resultsHTML += templateHTML.replace("{{val}}", items[i][0] + " : " + items[i][1] + ' time(s)');
     }
 
     element.innerHTML = resultsHTML;
@@ -105,19 +105,22 @@ function sortProperties(obj) {
 
     return rtnArray;
 }
-
+//1:38:00 Vid.
 function filterStopWords(wordArray) {
     var commonWords = getStopWords();
     var commonObj = {};
     var uncommonArr = [];
 
-    for (i=0;i<commonObj.length; i++) {
-        commonObj[common[i].trim()] = true
+    for (i=0;i<commonWords.length; i++) {
+        commonObj[commonWords[i].trim()] = true;
     }
     for (i=0;i<wordArray.length;i++) {
         word = wordArray[i].trim().toLowerCase();
-        if (!commonObj)
+        if (!commonObj[word]){
+            uncommonArr.push(word);
+        }
     }
+    return uncommonArr;
 }
 
 
