@@ -70,8 +70,8 @@ function getDocStats(fileContent) {
     ULTemplate(top5Words, document.getElementById('mostUsed'));
     ULTemplate(least5Words, document.getElementById('leastUsed'));
 
-    // docLength.innerText = "Document Length: " + text.length;
-    // wordCount.innerText = "Word Count: " + wordArray.length;
+    docLength.innerText = "Document Length: " + text.length;
+    wordCount.innerText = "Word Count: " + wordArray.length;
 }
 
 
@@ -111,12 +111,12 @@ function filterStopWords(wordArray) {
     var commonObj = {};
     var uncommonArr = [];
 
-    for (i=0;i<commonWords.length; i++) {
+    for (i = 0; i < commonWords.length; i++) {
         commonObj[commonWords[i].trim()] = true;
     }
-    for (i=0;i<wordArray.length;i++) {
+    for (i = 0; i < wordArray.length; i++) {
         word = wordArray[i].trim().toLowerCase();
-        if (!commonObj[word]){
+        if (!commonObj[word]) {
             uncommonArr.push(word);
         }
     }
